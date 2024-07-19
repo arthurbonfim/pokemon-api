@@ -4,7 +4,8 @@ const pool = mysql.createPool({
     host: process.env.DB_HOST || 'localhost',
     user: process.env.DB_USER || 'pokemon_user',
     password: process.env.DB_PASSWORD || 'root',
-    database: process.env.DB_DATABASE || 'pokemon_db'
+    database: process.env.DB_DATABASE || 'pokemon_db',
+    connectTimeout: 10000 
 });
 
 //testando a coneccao
