@@ -6,7 +6,9 @@ const pool = mysql.createPool({
     password: process.env.DB_PASSWORD || 'root',
     database: process.env.DB_DATABASE || 'pokemon_db',
     port: process.env.DB_PORT || 3306,
-    connectTimeout: 120000
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
 });
 
 //testando a coneccao
