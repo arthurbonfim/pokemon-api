@@ -1,8 +1,9 @@
 import express from 'express';
-import mysql from 'mysql2';
+import cors from 'cors';
 import { returnPokemons } from './service/service.js';
 
 const app = express();
+app.use(cors());
 const PORT = process.env.PORT || 3000;
 
 //function to obtain the pokemons
