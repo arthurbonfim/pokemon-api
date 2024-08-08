@@ -7,7 +7,7 @@ app.use(cors());
 const PORT = process.env.PORT || 3000;
 
 //function to obtain the pokemons
-app.get('/pokemons', async (req, res) => {
+app.get('/', async (req, res) => {
     const pokemons = await returnPokemons();
     res.json(pokemons);
 });
